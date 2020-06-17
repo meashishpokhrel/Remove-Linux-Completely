@@ -1,0 +1,27 @@
+==================================================================
+To remove Linux Completely From PC in Dual Boot windows.
+==================================================================
+1. Open Windows.
+2. Goto Create disk Partitions.
+3. Delete the disk where LINUX is located. (The disk is unallocated now)
+4. Open terminal/Command Prompt as adminsitrator.
+5. Type diskpart
+6. type list volume
+7. Select volume where the system is located. [Eg: select volume 3]
+8. Assign any letter to the volume. [Eg: assign letter = K]
+9. Open a new command prompt and goto the newly assigned drive. [Eg: k:]
+10. Type cd efi
+11. Type dir 
+	You will see the Linux name in the list
+12.Type rmdir /s linux_name [Eg: rmdir /s ubuntu]
+13. Come back to the old command prompt 
+14. Remove the assigned letter [Eg: remove letter = k]
+
+
+To use the unallocated free space from ubuntu partitions.
+-----------------------------------------------------------------------
+
+1. Make sure the disk is deleted. [It should turn into black color]
+2. Go to the last partition of our drive where you want to extend.
+3. Rigt click and select extend volume.
+4. The free space now will be seen click next and then click on finish.
